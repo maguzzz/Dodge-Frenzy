@@ -1,0 +1,3 @@
+﻿  Dodge Frenzy.cpp
+C:\Programming\Dodge Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(10,34): error C2440: "<function-style-cast>": "initializer list" kann nicht in "sf::VideoMode" konvertiert werden
+C:\Programming\Dodge Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(10,34): message : Quelltyp konnte von keinem Konstruktor angenommen werden, oder die Überladungsauflösung des Konstruktors ist mehrdeutig
