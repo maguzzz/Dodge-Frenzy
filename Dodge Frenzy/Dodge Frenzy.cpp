@@ -20,8 +20,8 @@ int main()
 	rect.setSize(sf::Vector2f(100, 100));
 	rect.setPosition(rectanglePosition);
 
-	float xVelocity = 5;
-	float yVelocity = 5;
+	float xVelocity = 0;
+	float yVelocity = 0;
 
 
 	//Player

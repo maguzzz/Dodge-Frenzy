@@ -1,2 +1,3 @@
 ﻿  Dodge Frenzy.cpp
+C:\programming\Dodge-Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(33,25): warning C4305: "Initialisierung": Verkürzung von "double" in "float"
   Dodge Frenzy.vcxproj -> C:\programming\Dodge-Frenzy\x64\Debug\Dodge Frenzy.exe
