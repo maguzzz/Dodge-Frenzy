@@ -9,18 +9,10 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Fonts">
-      <UniqueIdentifier>{dd7b2853-d663-40b6-a093-88ee80b9673a}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dodge Frenzy.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="..\..\DePixelHalbfett.ttf">
-      <Filter>Fonts</Filter>
-    </Font>
   </ItemGroup>
 </Project>
