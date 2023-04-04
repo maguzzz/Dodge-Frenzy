@@ -1,4 +1,5 @@
 #include<iostream>
+#include <fstream>
 #include "SFML/Graphics.hpp"
 #include <windows.h>
 
@@ -7,8 +8,8 @@ using namespace std;
 int main()
 {
 	//Enemy
-	int EnemyVelocityX = 4;
-	int EnemyVelocityY = 4.2;
+	int EnemyVelocityX = 0;
+	int EnemyVelocityY = 0;
 
 	//Player
 	int playerSpeed = 6;
@@ -16,7 +17,7 @@ int main()
 	//Score
 	int ScoreNum = 0;
 	int HighScoreNum = 0;
-
+	string tempScore;
 
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "Dodge Frenzy");
 	window.setFramerateLimit(60);
@@ -79,7 +80,7 @@ int main()
 			rect.setPosition(rectanglePosition);
 		}
 
-		//Score
+		//Checking if player is Alive and adding Points
 		if (playerStatus == true) {
 			player.setFillColor(sf::Color::Green);
 			ScoreNum = ScoreNum + 1;
@@ -87,12 +88,21 @@ int main()
 			Score.setString("Score: \n" + to_string(ScoreNum));
 			HighScore.setString("High Score:\n" + to_string(HighScoreNum));
 
+			ifstream infile("score.txt"); // Datei zum Lesen öffnen
+			getline(infile, tempScore); // Eingabe aus der Datei lesen
+
+			HighScoreNum = stoi(tempScore);
+
 			//Increasing High Score if its lower then the current score
-			if(ScoreNum >= HighScoreNum) HighScoreNum = ScoreNum + 1;
+			if (ScoreNum >= HighScoreNum) HighScoreNum = ScoreNum + 1;
 		}
 		else {
 			player.setFillColor(sf::Color::Red);
 			playerSpeed = 0;
+
+			ofstream outfile("score.txt"); // Datei zum Schreiben öffnen
+			outfile << HighScoreNum -1; // Eingabe in die Datei schreiben
+			outfile.close(); // Datei schließen
 		}
 
 		// Calculating Hitbox by Moveing Origin point of Cube
