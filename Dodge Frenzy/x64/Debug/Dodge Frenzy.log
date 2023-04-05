@@ -1,6 +1,4 @@
 ﻿  Dodge Frenzy.cpp
 C:\programming\Dodge-Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(35,23): warning C4305: "Argument": Verkürzung von "double" in "float"
 C:\programming\Dodge-Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(43,27): warning C4305: "Argument": Verkürzung von "double" in "float"
-C:\programming\Dodge-Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(112,87): warning C4244: "*=": Konvertierung von "double" in "int", möglicher Datenverlust
-C:\programming\Dodge-Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(113,87): warning C4244: "*=": Konvertierung von "double" in "int", möglicher Datenverlust
   Dodge Frenzy.vcxproj -> C:\programming\Dodge-Frenzy\x64\Debug\Dodge Frenzy.exe

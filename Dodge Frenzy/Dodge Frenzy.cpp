@@ -8,8 +8,8 @@ using namespace std;
 int main()
 {
 	//Enemy
-	int EnemyVelocityX = 0;
-	int EnemyVelocityY = 0;
+	float EnemyVelocityX = 4;
+	float EnemyVelocityY = 4;
 
 	//Player
 	int playerSpeed = 6;
@@ -101,16 +101,30 @@ int main()
 			playerSpeed = 0;
 
 			ofstream outfile("score.txt"); // Datei zum Schreiben öffnen
-			outfile << HighScoreNum -1; // Eingabe in die Datei schreiben
+			outfile << HighScoreNum - 1; // Eingabe in die Datei schreiben
 			outfile.close(); // Datei schließen
 		}
+
+		
+		EnemyVelocityX += ScoreNum / EnemyVelocityX / ( 4000 + (rand() % 5001));
+		EnemyVelocityY += ScoreNum / EnemyVelocityY / (4000 + (rand() % 5001));
 
 		// Calculating Hitbox by Moveing Origin point of Cube
 		if (!(playerPosition.y + 50 <= rectanglePosition.y || playerPosition.y >= rectanglePosition.y + 100 /* Horizontal */ || playerPosition.x + 50 <= rectanglePosition.x || playerPosition.x >= rectanglePosition.x + 100)) playerStatus = false;
 
-		//Bound Check Cube                                    -100 Is Padding
-		if (rectanglePosition.x < 0 || rectanglePosition.x > 1280 - 100) EnemyVelocityX *= -1.2;
-		if (rectanglePosition.y < 0 || rectanglePosition.y > 720 - 100)  EnemyVelocityY *= -1.2;
+
+		//Bound Check Cube								-100 Is Padding
+		if (rectanglePosition.x < 0 || rectanglePosition.x > 1280 - 100){
+			EnemyVelocityX *= -1;
+		}
+		if (rectanglePosition.y < 0 || rectanglePosition.y > 720 - 100) {
+			EnemyVelocityY *= -1;	
+		}
+
+
+
+		cout << EnemyVelocityX << " X" << endl;
+		cout << EnemyVelocityY << " Y" << endl;
 
 		//Bound Check Cube                                    -50 Is Padding
 		if (playerPosition.x < 0 || playerPosition.x > 1280 - 50 || playerPosition.y < 0 || playerPosition.y > 720 - 50) playerStatus = false;
@@ -118,6 +132,7 @@ int main()
 		//physics
 		rectanglePosition.x += EnemyVelocityX;
 		rectanglePosition.y += EnemyVelocityY;
+
 		rect.setPosition(rectanglePosition);
 		player.setPosition(playerPosition);
 
