@@ -1,4 +1,4 @@
 ﻿  Dodge Frenzy.cpp
-C:\programming\Dodge-Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(35,23): warning C4305: "Argument": Verkürzung von "double" in "float"
-C:\programming\Dodge-Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(43,27): warning C4305: "Argument": Verkürzung von "double" in "float"
+C:\programming\Dodge-Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(36,23): warning C4305: "Argument": Verkürzung von "double" in "float"
+C:\programming\Dodge-Frenzy\Dodge Frenzy\Dodge Frenzy.cpp(44,27): warning C4305: "Argument": Verkürzung von "double" in "float"
   Dodge Frenzy.vcxproj -> C:\programming\Dodge-Frenzy\x64\Debug\Dodge Frenzy.exe
