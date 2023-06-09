@@ -90,7 +90,7 @@ int main()
 			//Checking if  the event is a Close butten press and closeing the Window
 			if (eventCheck.type == sf::Event::Closed) window.close();
 
-			//Squar movement
+			//Square movement
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) playerPosition.y -= playerSpeed;
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) playerPosition.x -= playerSpeed;
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) playerPosition.y += playerSpeed;
